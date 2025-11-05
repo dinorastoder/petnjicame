@@ -5,62 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Stranica nije pronađena">
     <title>404 - Stranica nije pronađena | Petnjica.me</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles.css">
-    <style>
-        .error-container {
-            text-align: center;
-            padding: 4rem 2rem;
-        }
-        .error-code {
-            font-size: 6rem;
-            font-weight: bold;
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-        .error-message {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-        }
-        .home-link {
-            display: inline-block;
-            padding: 1rem 2rem;
-            background-color: var(--primary-color);
-            color: var(--white);
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-        .home-link:hover {
-            background-color: var(--secondary-color);
-        }
-    </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <h1>Petnjica.me</h1>
-            </div>
+    <header class="page-header">
+        <nav class="nav">
+            <a class="brand" href="/">
+                <img src="/assets/logo.svg" alt="Petnjica.me logo" class="brand__mark" width="48" height="36">
+                <span class="brand__text">Petnjica.me</span>
+            </a>
             <ul class="nav-links">
                 <li><a href="/">Početna</a></li>
+                <li><a href="/initiatives.html">Inicijative</a></li>
                 <li><a href="/about.html">O nama</a></li>
+                <li><a href="/get-involved.html">Uključi se</a></li>
                 <li><a href="/contact.html">Kontakt</a></li>
             </ul>
+            <a href="/get-involved.html" class="nav-cta">Pridruži se inicijativi</a>
         </nav>
     </header>
 
     <main>
-        <div class="error-container">
-            <div class="error-code">404</div>
-            <div class="error-message">Stranica nije pronađena</div>
-            <p>Stranica koju tražite ne postoji ili je uklonjena.</p>
-            <br>
-            <a href="/" class="home-link">Povratak na početnu stranicu</a>
-        </div>
+        <section class="hero hero--subtle">
+            <div class="hero__badge">Greška 404</div>
+            <h1>Ups! Stranica koju tražiš nije pronađena</h1>
+            <p>Provjeri da li je adresa ispravno unijeta ili iskoristi navigaciju ispod kako bi se vratio na aktivne sekcije platforme.</p>
+        </section>
+
+        <section class="section">
+            <article class="card card--centered">
+                <h2>Možda tražiš neku od ovih stranica</h2>
+                <div class="chip-group">
+                    <a class="chip chip--link" href="/">Početna</a>
+                    <a class="chip chip--link" href="/initiatives.html">Inicijative</a>
+                    <a class="chip chip--link" href="/about.html">O nama</a>
+                    <a class="chip chip--link" href="/get-involved.html">Uključi se</a>
+                    <a class="chip chip--link" href="/contact.html">Kontakt</a>
+                </div>
+                <a class="btn primary" href="/">Vrati se na početnu</a>
+            </article>
+        </section>
     </main>
 
-    <footer>
-        <p>&copy; 2025 Petnjica.me - Community-driven informational website</p>
+    <footer class="site-footer">
+        <div class="site-footer__top">
+            <div>
+                <img src="/assets/logo.svg" alt="Petnjica.me logo" width="40" height="30">
+                <p>Platforma koja spaja ljude, ideje i projekte iz srca Bihora.</p>
+            </div>
+            <div>
+                <h4>Navigacija</h4>
+                <ul>
+                    <li><a href="/">Početna</a></li>
+                    <li><a href="/initiatives.html">Inicijative</a></li>
+                    <li><a href="/about.html">O nama</a></li>
+                    <li><a href="/get-involved.html">Uključi se</a></li>
+                    <li><a href="/contact.html">Kontakt</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Ostani u toku</h4>
+                <p>Prati nas dok razvijamo digitalnu platformu za zajednicu.</p>
+                <a class="link" href="mailto:info@petnjica.me">info@petnjica.me</a>
+            </div>
+        </div>
+        <p class="site-footer__bottom">&copy; 2025 Petnjica.me. Sva prava zadržana.</p>
     </footer>
 </body>
 </html>

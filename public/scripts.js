@@ -3,7 +3,7 @@
     const toggle = document.querySelector('.nav-toggle');
     const navContent = document.getElementById('primary-navigation');
     const navLinks = navContent ? navContent.querySelectorAll('a') : [];
-    const mobileQuery = window.matchMedia('(max-width: 759px)');
+    const mobileQuery = window.matchMedia('(max-width: 760px)');
     const TRANSITION_DURATION = 260;
 
     if (!nav || !toggle || !navContent) {

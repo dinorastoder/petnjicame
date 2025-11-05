@@ -1,0 +1,21 @@
+{
+  "name": "petnjicame",
+  "version": "1.0.0",
+  "description": "Community-driven informational website for Petnjica, Montenegro",
+  "scripts": {
+    "dev": "wrangler pages dev public --port 8080",
+    "deploy": "wrangler pages deploy public --project-name=petnjicame",
+    "preview": "wrangler pages dev public"
+  },
+  "keywords": [
+    "petnjica",
+    "montenegro",
+    "cloudflare",
+    "static-site"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "wrangler": "^3.0.0"
+  }
+}

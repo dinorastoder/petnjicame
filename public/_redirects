@@ -1,0 +1,8 @@
+# Redirects and URL rewrites
+
+# Redirect www to non-www
+https://www.petnjica.me/* https://petnjica.me/:splat 301
+
+# SPA-style routing - serve index.html for non-existent paths
+# (This is commented out for now since we have static pages)
+# /*  /index.html  200

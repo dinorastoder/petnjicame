@@ -5,48 +5,134 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Community-driven informational website for Petnjica, Montenegro">
     <title>Petnjica.me - Informacioni portal za Petnjicu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <h1>Petnjica.me</h1>
-            </div>
+    <header class="page-header">
+        <nav class="nav">
+            <a class="brand" href="/">
+                <img src="/assets/logo.svg" alt="Petnjica.me logo" class="brand__mark" width="48" height="36">
+                <span class="brand__text">Petnjica.me</span>
+            </a>
             <ul class="nav-links">
                 <li><a href="/">Početna</a></li>
                 <li><a href="/about.html">O nama</a></li>
                 <li><a href="/contact.html">Kontakt</a></li>
             </ul>
+            <a href="/contact.html" class="nav-cta">Pridruži se inicijativi</a>
         </nav>
     </header>
 
     <main>
         <section class="hero">
-            <h2>Dobrodošli na Petnjica.me</h2>
-            <p>Nezavisna platforma za razmenu lokalnih informacija, ideja i resursa.</p>
+            <div class="hero__badge">Zajednica Petnjice</div>
+            <h1>Digitalni dom za ideje, priče i projekte iz Petnjice</h1>
+            <p>Gradimo otvorenu platformu koja povezuje lokalne inicijative, podržava kreativne projekte i čuva kulturno naslijeđe našeg kraja.</p>
+            <div class="hero__cta">
+                <a href="/contact.html" class="btn primary">Predloži projekat</a>
+                <a href="/about.html" class="btn ghost">Saznaj više</a>
+            </div>
+            <div class="hero__meta">
+                <div>
+                    <span class="meta__value">12+</span>
+                    <span class="meta__label">Aktivnih inicijativa</span>
+                </div>
+                <div>
+                    <span class="meta__value">350+</span>
+                    <span class="meta__label">Članova zajednice</span>
+                </div>
+                <div>
+                    <span class="meta__value">24/7</span>
+                    <span class="meta__label">Otvoreni resursi</span>
+                </div>
+            </div>
         </section>
 
         <section class="content">
-            <div class="card">
-                <h3>O Petnjici</h3>
-                <p>Petnjica je opština u sjevernoj Crnoj Gori, poznata po svojoj bogatoj istoriji i prirodnim ljepotama.</p>
-            </div>
+            <article class="card highlight">
+                <div class="card__header">
+                    <h2>Šta pokreće Petnjicu</h2>
+                    <p>Kombinujemo tradiciju sa savremenim pristupom kako bismo osnažili lokalne zajednice, udruženja i pojedince.</p>
+                </div>
+                <div class="card__grid">
+                    <div class="pill">
+                        <span>💡</span>
+                        <p>Ideje iz zajednice pretvaramo u vidljive projekte.</p>
+                    </div>
+                    <div class="pill">
+                        <span>🤝</span>
+                        <p>Povezujemo ljude, organizacije i dijasporu.</p>
+                    </div>
+                    <div class="pill">
+                        <span>🌱</span>
+                        <p>Podržavamo održivi razvoj i zelene inicijative.</p>
+                    </div>
+                    <div class="pill">
+                        <span>🎓</span>
+                        <p>Kreiramo resurse za obrazovanje i mentorstvo.</p>
+                    </div>
+                </div>
+            </article>
 
-            <div class="card">
-                <h3>Zajednica</h3>
-                <p>Ovo je mjesto za sve stanovnike i prijatelje Petnjice da dijele informacije, ideje i prijedloge.</p>
-            </div>
+            <article class="card">
+                <h3>Aktuelno u Petnjici</h3>
+                <ul class="list">
+                    <li><strong>Digitalna mapa Petnjice</strong> – kartografisanje kulturnih i prirodnih tačaka koje inspirišu.</li>
+                    <li><strong>Program za mlade inovativce</strong> – mentorska podrška za učenike i studente.</li>
+                    <li><strong>Zelene staze Bihora</strong> – zajedničke akcije čišćenja i uređenja izletišta.</li>
+                </ul>
+                <a class="link" href="/about.html">Pogledaj sve projekte →</a>
+            </article>
 
-            <div class="card">
-                <h3>Budućnost</h3>
-                <p>U planu je dodavanje forme za prikupljanje ideja i prijedloga od zajednice.</p>
+            <article class="card">
+                <h3>Kako možeš da doprineseš?</h3>
+                <p>Tražimo priče, fotografije, ideje i vrijeme volontera kako bismo zajedno kreirali sadržaj koji služi zajednici.</p>
+                <div class="chip-group">
+                    <span class="chip">📸 Foto arhiva</span>
+                    <span class="chip">🗺️ Lokalni vodiči</span>
+                    <span class="chip">🛠️ Volonterski projekti</span>
+                </div>
+                <a class="btn secondary" href="/contact.html">Pošalji prijedlog</a>
+            </article>
+        </section>
+
+        <section class="cta-block">
+            <div class="cta-block__content">
+                <h2>Prijavi se za mjesečni bilten Petnjica.me</h2>
+                <p>Primaj najnovije vijesti, pozive na događaje i pozive za projekte direktno na e-mail.</p>
             </div>
+            <form class="cta-block__form">
+                <label class="sr-only" for="email">Email adresa</label>
+                <input type="email" id="email" name="email" placeholder="tvoje.ime@example.com" required>
+                <button type="submit" class="btn primary">Pretplati se</button>
+            </form>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2025 Petnjica.me - Community-driven informational website</p>
+    <footer class="site-footer">
+        <div class="site-footer__top">
+            <div>
+                <img src="/assets/logo.svg" alt="Petnjica.me logo" width="40" height="30">
+                <p>Platforma koja spaja ljude, ideje i projekte iz srca Bihora.</p>
+            </div>
+            <div>
+                <h4>Navigacija</h4>
+                <ul>
+                    <li><a href="/">Početna</a></li>
+                    <li><a href="/about.html">O nama</a></li>
+                    <li><a href="/contact.html">Kontakt</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Ostani u toku</h4>
+                <p>Prati nas dok razvijamo digitalnu platformu za zajednicu.</p>
+                <a class="link" href="mailto:info@petnjica.me">info@petnjica.me</a>
+            </div>
+        </div>
+        <p class="site-footer__bottom">&copy; 2025 Petnjica.me. Sva prava zadržana.</p>
     </footer>
 </body>
 </html>

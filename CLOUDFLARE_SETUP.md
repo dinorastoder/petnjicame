@@ -18,9 +18,9 @@ This option uses GitHub Actions for automated deployment whenever changes are pu
 #### Step 1: Connect GitHub Repository to Cloudflare Pages
 
 1. Log in to your [Cloudflare Dashboard](https://dash.cloudflare.com/)
-2. Navigate to "Workers & Pages" → "Pages"
-3. Click "Create a project" → "Connect to Git"
-4. Select your GitHub repository: `dinorastoder/petnjicame`
+2. Navigate to "Compute & AI" → "Workers & Pages"
+3. Click on "Get Started" on "Import a Git Project"
+4. First click "GitHub" to select, then select your GitHub repository: `dinorastoder/petnjicame`
 5. Configure the build settings:
    - **Production branch**: `main`
    - **Build command**: (leave empty)
@@ -179,4 +179,4 @@ For issues or questions:
 
 ---
 
-Last updated: November 5, 2024
+Last updated: November 5, 2025

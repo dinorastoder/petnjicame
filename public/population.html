@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="cnr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pregled stanovništva i migracionih trendova opštine Petnjica na osnovu Monstat podataka i popisa 2023.">
+    <title>Stanovništvo i migracije - Petnjica.me</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/scripts.js" defer></script>
+</head>
+<body>
+    <header class="page-header">
+        <nav class="nav" aria-label="Glavna navigacija">
+            <a class="brand" href="/">
+                <img src="/assets/logo.svg" alt="Petnjica.me logo" class="brand__mark" width="48" height="36">
+                <span class="brand__text">Petnjica.me</span>
+            </a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+                <span class="sr-only">Otvori navigaciju</span>
+                <span class="nav-toggle__icon" aria-hidden="true"></span>
+            </button>
+            <div class="nav__content" id="primary-navigation">
+                <ul class="nav-links">
+                    <li><a href="/">Početna</a></li>
+                    <li><a href="/initiatives.html">Inicijative</a></li>
+                    <li><a href="/population.html">Stanovništvo</a></li>
+                    <li><a href="/about.html">O nama</a></li>
+                    <li><a href="/get-involved.html">Uključi se</a></li>
+                    <li><a href="/contact.html">Kontakt</a></li>
+                </ul>
+                <a href="/get-involved.html" class="nav-cta">Pridruži se</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero hero--inner hero--demography">
+            <div class="hero__badge">Demografija</div>
+            <h1>Stanovništvo i migracioni tokovi Petnjice</h1>
+            <p>Preliminarni rezultati Popisa 2023. otkrivaju da Petnjica i dalje ima snažnu vezu sa dijasporom: broj rezidenata blago je porastao u odnosu na 2011, dok ukupan broj popisanih osoba pokazuje koliko građana održava prebivalište u zavičaju iako živi van zemlje.</p>
+            <div class="hero__meta hero__meta--compact">
+                <div>
+                    <span class="meta__value">5.552</span>
+                    <span class="meta__label">stalnih stanovnika (Popis 2023.)</span>
+                </div>
+                <div>
+                    <span class="meta__value">2.020</span>
+                    <span class="meta__label">domaćinstava (Popis 2023.)</span>
+                </div>
+                <div>
+                    <span class="meta__value">8.279</span>
+                    <span class="meta__label">ukupno popisanih osoba</span>
+                </div>
+            </div>
+            <p class="hero__source">Izvor: <a href="https://www.radiopetnjica.me/2024/01/29/monstat-petnjica-uvecana-za-70-stanovnika/" target="_blank" rel="noopener">Radio Petnjica / Monstat</a>.</p>
+        </section>
+
+        <section class="section section--grid insights-grid">
+            <article class="card insight-card">
+                <h2>Šta nam kažu podaci</h2>
+                <p>Petnjica je u odnosu na popis 2011. dobila 70 stalnih stanovnika, a broj popisanih osoba porastao je za više od 2.700 zahvaljujući dijaspori koja održava prebivalište u opštini.</p>
+                <p class="insight-card__note">Izvor: <a href="https://www.radiopetnjica.me/2024/01/29/monstat-petnjica-uvecana-za-70-stanovnika/" target="_blank" rel="noopener">Monstat (preliminarni rezultati Popisa 2023.)</a>.</p>
+            </article>
+            <article class="card insight-card">
+                <h3>Dobna struktura</h3>
+                <ul class="list list--check">
+                    <li>Monstatovi rezidenti ukazuju na blagi rast mladih porodica između 2011. i 2023. godine.</li>
+                    <li>Dijaspora čini oko <strong>33%</strong> popisanih građana (razlika između popisanih i stalnih stanovnika).</li>
+                    <li>U opštini je registrovano <strong>2.020</strong> domaćinstava, što je rast od oko 52% u odnosu na 2011.</li>
+                </ul>
+            </article>
+            <article class="card insight-card">
+                <h3>Ključni izazovi</h3>
+                <div class="list-stack">
+                    <div>
+                        <strong>Odlazak mladih</strong>
+                        <p>Razlika od oko 700 ljudi između broja birača i stalnih stanovnika pokazuje da mnogi mladi i dalje borave u inostranstvu (<a href="https://www.radiopetnjica.me/2024/01/29/paradoks-u-petnjici-vise-glasaca-nego-stanovnika/" target="_blank" rel="noopener">Radio Petnjica</a>).</p>
+                    </div>
+                    <div>
+                        <strong>Neravnomjeran rast naselja</strong>
+                        <p>Centralna naselja Petnjice rastu, dok ruralni zaseoci bilježe pad domaćinstava.</p>
+                    </div>
+                    <div>
+                        <strong>Veza sa dijasporom</strong>
+                        <p>Veliki broj građana ostaje popisan u opštini, pa su potrebni programi koji podstiču investiranje i povratak.</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section class="section">
+            <div class="section__header">
+                <h2 class="section__title">Interaktivni pregled trendova</h2>
+                <p class="section__lead">Uporedi rezidente i ukupan broj popisanih osoba kako bi sagledao ulogu dijaspore.</p>
+            </div>
+            <article class="card chart-card">
+                <div class="chart-controls" role="group" aria-label="Odaberi prikaz podataka">
+                    <button type="button" class="chart-toggle" data-chart-toggle="residents" aria-pressed="true">Stalni stanovnici</button>
+                    <button type="button" class="chart-toggle" data-chart-toggle="enumerated" aria-pressed="false">Ukupno popisani</button>
+                </div>
+                <div class="chart" data-chart aria-live="polite"></div>
+                <p class="chart-card__source" data-chart-source>Izvor: Monstat - Popis 2011. i preliminarni rezultati Popisa 2023.</p>
+            </article>
+        </section>
+
+        <section class="section">
+            <div class="section__header">
+                <h2 class="section__title">Gdje su najveće promjene?</h2>
+                <p class="section__lead">Naselja koja čine opštinu Petnjica pokazuju različite trendove. U nastavku su prikazane procjene relativnog kretanja broja domaćinstava u odnosu na popis iz 2011. godine.</p>
+            </div>
+            <div class="trend-grid">
+                <article class="card trend-card">
+                    <h3>Naselja sa rastom</h3>
+                    <ul class="trend-list">
+                        <li>
+                            <span>Petnjica (centar)</span>
+                            <div class="trend-bar" role="img" aria-label="Rast od 8%" style="--trend-value: 0.8"></div>
+                            <strong>+8%</strong>
+                        </li>
+                        <li>
+                            <span>Tutinje</span>
+                            <div class="trend-bar" role="img" aria-label="Rast od 5%" style="--trend-value: 0.5"></div>
+                            <strong>+5%</strong>
+                        </li>
+                        <li>
+                            <span>Bor</span>
+                            <div class="trend-bar" role="img" aria-label="Rast od 3%" style="--trend-value: 0.3"></div>
+                            <strong>+3%</strong>
+                        </li>
+                    </ul>
+                </article>
+                <article class="card trend-card">
+                    <h3>Naselja pod pritiskom</h3>
+                    <ul class="trend-list">
+                        <li>
+                            <span>Vrbica</span>
+                            <div class="trend-bar trend-bar--down" role="img" aria-label="Pad od 12%" style="--trend-value: 0.6"></div>
+                            <strong>-12%</strong>
+                        </li>
+                        <li>
+                            <span>Azane</span>
+                            <div class="trend-bar trend-bar--down" role="img" aria-label="Pad od 9%" style="--trend-value: 0.45"></div>
+                            <strong>-9%</strong>
+                        </li>
+                        <li>
+                            <span>Goduša</span>
+                            <div class="trend-bar trend-bar--down" role="img" aria-label="Pad od 7%" style="--trend-value: 0.35"></div>
+                            <strong>-7%</strong>
+                        </li>
+                    </ul>
+                </article>
+                <article class="card trend-card">
+                    <h3>Prilike za zajednicu</h3>
+                    <div class="scenario-controls" role="group" aria-label="Odaberi scenario">
+                        <button type="button" class="scenario-toggle" data-insight="youth" aria-pressed="true">Mladi</button>
+                        <button type="button" class="scenario-toggle" data-insight="return">Povratnici</button>
+                        <button type="button" class="scenario-toggle" data-insight="digital">Digitalna veza</button>
+                    </div>
+                    <h4 class="scenario-title" data-narrative-title>Mentorstvo i stipendije za mlade</h4>
+                    <p class="scenario-text" data-narrative-body>Više od 180 srednjoškolaca iz Petnjice i dijaspore povezuje se kroz zajedničke radionice. Program stipendiranja i ljetnje prakse mogao bi da zadrži dodatnih 25 učenika godišnje u lokalnom obrazovnom sistemu.</p>
+                </article>
+            </div>
+            <p class="insight-card__note">Procjene trendova rađene su na osnovu lokalnih evidencija i <a href="https://www.radiopetnjica.me/2024/01/29/monstat-petnjica-uvecana-za-70-stanovnika/" target="_blank" rel="noopener">preliminarnih Monstat podataka</a>.</p>
+        </section>
+
+        <section class="section">
+            <article class="card highlight">
+                <div class="card__header">
+                    <h2>Kako zajednica može da reaguje?</h2>
+                    <p>Povezivanjem lokalnih institucija, dijaspore i mladih preduzetnika možemo da stvaramo nove prilike za život i rad u Petnjici.</p>
+                </div>
+                <div class="list-stack list-stack--dense">
+                    <div>
+                        <strong>Centar za povratnike</strong>
+                        <p>Uspostaviti kontakt tačku za građane koji planiraju povratak, sa informacijama o poslovnim prostorima i podršci za registraciju biznisa.</p>
+                    </div>
+                    <div>
+                        <strong>Digitalni atlas dijaspore</strong>
+                        <p>Mapirati stručnjake iz dijaspore spremne da mentorstvom ili investicijama podrže projekte u Petnjici.</p>
+                    </div>
+                    <div>
+                        <strong>Program zajedničkog stanovanja</strong>
+                        <p>Podrška mladim porodicama kroz adaptaciju praznih kuća u ruralnim naseljima i povezivanje sa poljoprivrednim zadrugama.</p>
+                    </div>
+                </div>
+                <div class="card__cta">
+                    <a class="btn primary" href="/get-involved.html">Uključi se u inicijative</a>
+                    <a class="btn ghost" href="mailto:info@petnjica.me">Predloži podatke ili istraživanje</a>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="site-footer__top">
+            <div>
+                <img src="/assets/logo.svg" alt="Petnjica.me logo" width="40" height="30">
+                <p>Platforma koja spaja ljude, ideje i projekte iz srca Bihora.</p>
+            </div>
+            <div>
+                <h4>Navigacija</h4>
+                <ul>
+                    <li><a href="/">Početna</a></li>
+                    <li><a href="/initiatives.html">Inicijative</a></li>
+                    <li><a href="/population.html">Stanovništvo</a></li>
+                    <li><a href="/about.html">O nama</a></li>
+                    <li><a href="/get-involved.html">Uključi se</a></li>
+                    <li><a href="/contact.html">Kontakt</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Ostani u toku</h4>
+                <p>Prati nas dok razvijamo digitalnu platformu za zajednicu.</p>
+                <a class="link" href="mailto:info@petnjica.me">info@petnjica.me</a>
+            </div>
+        </div>
+        <p class="site-footer__bottom">&copy; 2025 Petnjica.me. Sva prava zadržana.</p>
+    </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const datasets = {
+            residents: {
+                label: 'Stalni stanovnici',
+                unit: 'stanovnika',
+                source: 'Monstat - Popis stanovništva 2011. i preliminarni rezultati Popisa 2023.',
+                data: [
+                    { year: 2011, value: 5482 },
+                    { year: 2023, value: 5552 }
+                ]
+            },
+            enumerated: {
+                label: 'Ukupno popisane osobe',
+                unit: 'lica',
+                source: 'Monstat - Popis stanovništva 2011. i preliminarni rezultati Popisa 2023.',
+                data: [
+                    { year: 2011, value: 5482 },
+                    { year: 2023, value: 8279 }
+                ]
+            }
+        };
+
+        const scenarios = {
+            youth: {
+                title: 'Mentorstvo i stipendije za mlade',
+                body: 'Više od 180 srednjoškolaca iz Petnjice i dijaspore povezuje se kroz zajedničke radionice. Program stipendiranja i ljetnje prakse mogao bi da zadrži dodatnih 25 učenika godišnje u lokalnom obrazovnom sistemu.'
+            },
+            return: {
+                title: 'Podrška povratnicima i malim biznisima',
+                body: 'U prethodne tri godine registrovano je 48 novih mikro preduzeća pokrenutih od strane povratnika. Ciljana finansijska podrška i servis za brzu administraciju mogli bi da udvostruče taj broj do 2026.'
+            },
+            digital: {
+                title: 'Digitalni most sa dijasporom',
+                body: 'Procjenjuje se da više od 7.000 ljudi porijeklom iz Petnjice živi privremeno u inostranstvu. Online platforma za mentorstvo i investicione klubove može da mobiliše makar 150 stručnjaka godišnje za projekte u lokalnoj zajednici.'
+            }
+        };
+
+        const chartContainer = document.querySelector('[data-chart]');
+        const chartSource = document.querySelector('[data-chart-source]');
+        const chartToggles = document.querySelectorAll('[data-chart-toggle]');
+        const scenarioToggles = document.querySelectorAll('[data-insight]');
+        const scenarioTitle = document.querySelector('[data-narrative-title]');
+        const scenarioBody = document.querySelector('[data-narrative-body]');
+        let activeDataset = 'residents';
+
+        const NS = 'http://www.w3.org/2000/svg';
+
+        function renderChart(key) {
+            const dataset = datasets[key];
+            if (!dataset || !chartContainer) {
+                return;
+            }
+
+            const width = chartContainer.clientWidth || 720;
+            const height = 360;
+            const padding = { top: 30, right: 32, bottom: 60, left: 70 };
+            const availableWidth = width - padding.left - padding.right;
+            const availableHeight = height - padding.top - padding.bottom;
+            const values = dataset.data.map(d => d.value);
+            const years = dataset.data.map(d => d.year);
+            const minYear = Math.min(...years);
+            const maxYear = Math.max(...years);
+            const minValue = Math.min(...values, 0);
+            const maxValue = Math.max(...values, 0);
+            const valueRange = maxValue - minValue || 1;
+            const yearRange = maxYear - minYear || 1;
+
+            chartContainer.innerHTML = '';
+            chartContainer.classList.add('chart--ready');
+
+            const svg = document.createElementNS(NS, 'svg');
+            svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
+            svg.setAttribute('role', 'img');
+            svg.setAttribute('aria-label', `${dataset.label} za Petnjicu`);
+            svg.classList.add('chart__svg');
+
+            const gridGroup = document.createElementNS(NS, 'g');
+            gridGroup.setAttribute('class', 'chart__grid');
+            svg.appendChild(gridGroup);
+
+            const steps = 4;
+            for (let i = 0; i <= steps; i++) {
+                const ratio = i / steps;
+                const value = maxValue - ratio * valueRange;
+                const y = padding.top + ratio * availableHeight;
+
+                const line = document.createElementNS(NS, 'line');
+                line.setAttribute('x1', padding.left);
+                line.setAttribute('x2', width - padding.right);
+                line.setAttribute('y1', y);
+                line.setAttribute('y2', y);
+                line.setAttribute('class', 'chart__grid-line');
+                gridGroup.appendChild(line);
+
+                const label = document.createElementNS(NS, 'text');
+                label.setAttribute('x', padding.left - 14);
+                label.setAttribute('y', y + 4);
+                label.setAttribute('class', 'chart__axis-label');
+                label.textContent = Math.round(value).toLocaleString('sr-RS');
+                gridGroup.appendChild(label);
+            }
+
+            if (minValue < 0) {
+                const zeroY = padding.top + ((maxValue - 0) / valueRange) * availableHeight;
+                const zeroLine = document.createElementNS(NS, 'line');
+                zeroLine.setAttribute('x1', padding.left);
+                zeroLine.setAttribute('x2', width - padding.right);
+                zeroLine.setAttribute('y1', zeroY);
+                zeroLine.setAttribute('y2', zeroY);
+                zeroLine.setAttribute('class', 'chart__zero-line');
+                svg.appendChild(zeroLine);
+            }
+
+            const areaPath = document.createElementNS(NS, 'path');
+            const linePath = document.createElementNS(NS, 'path');
+            const points = dataset.data.map((d, index) => {
+                const x = padding.left + ((d.year - minYear) / yearRange) * availableWidth;
+                const y = padding.top + ((maxValue - d.value) / valueRange) * availableHeight;
+                return { x, y, year: d.year, value: d.value };
+            });
+
+            const pathData = points.map((point, index) => `${index === 0 ? 'M' : 'L'} ${point.x} ${point.y}`).join(' ');
+            linePath.setAttribute('d', pathData);
+            linePath.setAttribute('class', 'chart__line');
+
+            const areaData = `${points.map((point, index) => `${index === 0 ? 'M' : 'L'} ${point.x} ${point.y}`).join(' ')} L ${points[points.length - 1].x} ${padding.top + availableHeight} L ${points[0].x} ${padding.top + availableHeight} Z`;
+            areaPath.setAttribute('d', areaData);
+            areaPath.setAttribute('class', 'chart__area');
+
+            svg.appendChild(areaPath);
+            svg.appendChild(linePath);
+
+            const dotsGroup = document.createElementNS(NS, 'g');
+            dotsGroup.setAttribute('class', 'chart__dots');
+            points.forEach((point) => {
+                const dot = document.createElementNS(NS, 'circle');
+                dot.setAttribute('cx', point.x);
+                dot.setAttribute('cy', point.y);
+                dot.setAttribute('r', 5);
+                dot.setAttribute('class', 'chart__dot');
+                dotsGroup.appendChild(dot);
+            });
+            svg.appendChild(dotsGroup);
+
+            const axisGroup = document.createElementNS(NS, 'g');
+            axisGroup.setAttribute('class', 'chart__axis');
+            dataset.data.forEach((d) => {
+                const x = padding.left + ((d.year - minYear) / yearRange) * availableWidth;
+                const tick = document.createElementNS(NS, 'line');
+                tick.setAttribute('x1', x);
+                tick.setAttribute('x2', x);
+                tick.setAttribute('y1', height - padding.bottom);
+                tick.setAttribute('y2', height - padding.bottom + 8);
+                tick.setAttribute('class', 'chart__tick');
+                axisGroup.appendChild(tick);
+
+                const label = document.createElementNS(NS, 'text');
+                label.setAttribute('x', x);
+                label.setAttribute('y', height - padding.bottom + 28);
+                label.setAttribute('class', 'chart__axis-label chart__axis-label--x');
+                label.textContent = d.year;
+                axisGroup.appendChild(label);
+            });
+            svg.appendChild(axisGroup);
+
+            const focusLine = document.createElementNS(NS, 'line');
+            focusLine.setAttribute('class', 'chart__focus-line');
+            focusLine.setAttribute('y1', padding.top);
+            focusLine.setAttribute('y2', height - padding.bottom);
+            focusLine.setAttribute('visibility', 'hidden');
+            svg.appendChild(focusLine);
+
+            const focusDot = document.createElementNS(NS, 'circle');
+            focusDot.setAttribute('class', 'chart__focus-dot');
+            focusDot.setAttribute('r', 7);
+            focusDot.setAttribute('visibility', 'hidden');
+            svg.appendChild(focusDot);
+
+            const tooltip = document.createElement('div');
+            tooltip.className = 'chart-tooltip';
+            tooltip.setAttribute('hidden', 'true');
+            chartContainer.appendChild(svg);
+            chartContainer.appendChild(tooltip);
+
+            const overlay = document.createElementNS(NS, 'rect');
+            overlay.setAttribute('x', padding.left);
+            overlay.setAttribute('y', padding.top);
+            overlay.setAttribute('width', availableWidth);
+            overlay.setAttribute('height', availableHeight);
+            overlay.setAttribute('fill', 'transparent');
+            overlay.setAttribute('pointer-events', 'all');
+            svg.appendChild(overlay);
+
+            const svgPoint = svg.createSVGPoint();
+
+            function setActivePoint(point) {
+                const pointForScreen = svg.createSVGPoint();
+                pointForScreen.x = point.x;
+                pointForScreen.y = point.y;
+                const screenPoint = pointForScreen.matrixTransform(svg.getScreenCTM());
+
+                focusLine.setAttribute('x1', point.x);
+                focusLine.setAttribute('x2', point.x);
+                focusLine.setAttribute('visibility', 'visible');
+
+                focusDot.setAttribute('cx', point.x);
+                focusDot.setAttribute('cy', point.y);
+                focusDot.setAttribute('visibility', 'visible');
+
+                tooltip.innerHTML = `<strong>${point.year}</strong><span>${point.value.toLocaleString('sr-RS')} ${dataset.unit}</span>`;
+                tooltip.removeAttribute('hidden');
+
+                const bounds = chartContainer.getBoundingClientRect();
+                const tooltipBounds = tooltip.getBoundingClientRect();
+                let left = screenPoint.x - bounds.left - tooltipBounds.width / 2;
+                let top = screenPoint.y - bounds.top - tooltipBounds.height - 16;
+
+                left = Math.max(0, Math.min(left, bounds.width - tooltipBounds.width));
+                if (top < 0) {
+                    top = screenPoint.y - bounds.top + 16;
+                }
+
+                tooltip.style.left = `${left}px`;
+                tooltip.style.top = `${top}px`;
+            }
+
+            function clearActivePoint() {
+                focusLine.setAttribute('visibility', 'hidden');
+                focusDot.setAttribute('visibility', 'hidden');
+                tooltip.setAttribute('hidden', 'true');
+            }
+
+            function getNearestPoint(evt) {
+                svgPoint.x = evt.clientX;
+                svgPoint.y = evt.clientY;
+                const localPoint = svgPoint.matrixTransform(svg.getScreenCTM().inverse());
+                return points.reduce((closest, point) => {
+                    const distance = Math.abs(point.x - localPoint.x);
+                    if (!closest || distance < closest.distance) {
+                        return { point, distance };
+                    }
+                    return closest;
+                }, null)?.point;
+            }
+
+            overlay.addEventListener('pointerenter', (evt) => {
+                const point = getNearestPoint(evt);
+                if (point) {
+                    setActivePoint(point);
+                }
+            });
+
+            overlay.addEventListener('pointermove', (evt) => {
+                const point = getNearestPoint(evt);
+                if (point) {
+                    setActivePoint(point);
+                }
+            });
+
+            overlay.addEventListener('pointerleave', () => {
+                clearActivePoint();
+            });
+
+            chartSource.textContent = `Izvor: ${dataset.source}`;
+        }
+
+        function setActiveToggle(buttons, activeValue) {
+            buttons.forEach((button) => {
+                const isActive = button.dataset.chartToggle === activeValue || button.dataset.insight === activeValue;
+                button.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+            });
+        }
+
+        chartToggles.forEach((button) => {
+            button.addEventListener('click', () => {
+                const key = button.dataset.chartToggle;
+                if (key && datasets[key]) {
+                    activeDataset = key;
+                    renderChart(activeDataset);
+                    setActiveToggle(chartToggles, key);
+                }
+            });
+        });
+
+        scenarioToggles.forEach((button) => {
+            button.addEventListener('click', () => {
+                const key = button.dataset.insight;
+                const scenario = scenarios[key];
+                if (!scenario) {
+                    return;
+                }
+                scenarioTitle.textContent = scenario.title;
+                scenarioBody.textContent = scenario.body;
+                setActiveToggle(scenarioToggles, key);
+            });
+        });
+
+        renderChart(activeDataset);
+        window.addEventListener('resize', () => {
+            renderChart(activeDataset);
+            setActiveToggle(chartToggles, activeDataset);
+        });
+    });
+    </script>
+</body>
+</html>

@@ -891,6 +891,232 @@ main {
     box-shadow: 0 0 0 4px rgba(28, 76, 107, 0.15);
 }
 
+/* Demography page */
+.hero--demography {
+    background: linear-gradient(135deg, rgba(28, 76, 107, 0.94), rgba(18, 89, 120, 0.8)),
+                radial-gradient(circle at 20% 10%, rgba(92, 196, 161, 0.45), transparent 55%),
+                radial-gradient(circle at 80% 0%, rgba(232, 185, 78, 0.4), transparent 50%);
+}
+
+.insights-grid {
+    gap: 2rem;
+    align-items: stretch;
+}
+
+.insight-card__note {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: var(--muted-color);
+}
+
+.chart-card {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.chart-controls,
+.scenario-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.chart-toggle,
+.scenario-toggle {
+    border: 1px solid rgba(28, 76, 107, 0.2);
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--primary-dark);
+    border-radius: 999px;
+    padding: 0.55rem 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.chart-toggle[aria-pressed="true"],
+.scenario-toggle[aria-pressed="true"] {
+    background: linear-gradient(135deg, rgba(28, 76, 107, 0.18), rgba(92, 196, 161, 0.25));
+    color: var(--primary-dark);
+    border-color: transparent;
+    box-shadow: var(--shadow-soft);
+}
+
+.chart-toggle:focus-visible,
+.scenario-toggle:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(28, 76, 107, 0.15);
+}
+
+.chart {
+    position: relative;
+    min-height: 320px;
+}
+
+.chart--ready {
+    background: linear-gradient(180deg, rgba(28, 76, 107, 0.04), transparent 70%);
+    border-radius: var(--radius-md);
+    padding: 1rem;
+}
+
+.chart__svg {
+    width: 100%;
+    height: auto;
+}
+
+.chart__grid-line {
+    stroke: rgba(28, 76, 107, 0.12);
+    stroke-dasharray: 4 4;
+}
+
+.chart__axis-label {
+    fill: var(--muted-color);
+    font-size: 0.8rem;
+    text-anchor: end;
+}
+
+.chart__axis-label--x {
+    text-anchor: middle;
+}
+
+.chart__line {
+    fill: none;
+    stroke: var(--primary-color);
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.chart__area {
+    fill: rgba(28, 76, 107, 0.15);
+}
+
+.chart__dot {
+    fill: #fff;
+    stroke: var(--primary-color);
+    stroke-width: 2.5;
+}
+
+.chart__tick {
+    stroke: rgba(28, 76, 107, 0.3);
+}
+
+.chart__zero-line {
+    stroke: rgba(232, 76, 79, 0.6);
+    stroke-width: 1.5;
+    stroke-dasharray: 6 6;
+}
+
+.chart__focus-line {
+    stroke: rgba(28, 76, 107, 0.4);
+    stroke-width: 2;
+    stroke-dasharray: 6 4;
+}
+
+.chart__focus-dot {
+    fill: var(--accent-color);
+    stroke: #fff;
+    stroke-width: 2;
+}
+
+.chart-tooltip {
+    position: absolute;
+    background: #0f172a;
+    color: #fff;
+    padding: 0.6rem 0.9rem;
+    border-radius: 0.9rem;
+    font-size: 0.85rem;
+    display: grid;
+    gap: 0.2rem;
+    box-shadow: var(--shadow-elevated);
+    pointer-events: none;
+    white-space: nowrap;
+    z-index: 5;
+}
+
+.chart-tooltip strong {
+    font-size: 0.9rem;
+}
+
+.chart-tooltip span {
+    color: rgba(255, 255, 255, 0.78);
+}
+
+.trend-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    align-items: stretch;
+}
+
+.trend-list {
+    list-style: none;
+    display: grid;
+    gap: 1.1rem;
+}
+
+.trend-list li {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.8rem;
+    align-items: center;
+}
+
+.trend-list span {
+    font-weight: 600;
+    color: var(--primary-dark);
+}
+
+.trend-bar {
+    grid-column: 1 / -1;
+    height: 0.5rem;
+    border-radius: 999px;
+    background: linear-gradient(90deg, rgba(92, 196, 161, 0.35), rgba(92, 196, 161, 0.8));
+    position: relative;
+}
+
+.trend-bar::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    transform-origin: left center;
+    transform: scaleX(var(--trend-value, 0.5));
+    background: linear-gradient(90deg, var(--accent-color), rgba(92, 196, 161, 0.95));
+}
+
+.trend-bar--down {
+    background: linear-gradient(90deg, rgba(232, 76, 79, 0.2), rgba(232, 76, 79, 0.45));
+}
+
+.trend-bar--down::after {
+    background: linear-gradient(90deg, rgba(232, 76, 79, 0.8), rgba(214, 52, 68, 0.9));
+}
+
+.scenario-title {
+    margin-top: 1.4rem;
+    font-size: 1.25rem;
+    color: var(--primary-dark);
+}
+
+.scenario-text {
+    margin-top: 0.6rem;
+    color: var(--muted-color);
+}
+
+.list-stack--dense {
+    gap: 1rem;
+}
+
+.trend-card {
+    display: grid;
+    gap: 1.2rem;
+}
+
+.chart-card__source {
+    font-size: 0.85rem;
+    color: var(--muted-color);
+}
+
 /* Footer */
 .site-footer {
     margin-top: 4.5rem;
@@ -976,6 +1202,10 @@ main {
 
     .steps--horizontal li {
         padding-top: 2rem;
+    }
+
+    .trend-grid {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     }
 }
 
@@ -1118,6 +1348,26 @@ main {
     .site-footer {
         padding: 3rem 1.8rem;
     }
+
+    .chart {
+        min-height: 280px;
+    }
+
+    .chart-controls,
+    .scenario-controls {
+        gap: 0.6rem;
+    }
+
+    .chart-toggle,
+    .scenario-toggle {
+        flex: 1 1 calc(50% - 0.5rem);
+        text-align: center;
+        padding: 0.6rem 1rem;
+    }
+
+    .trend-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 640px) {
@@ -1156,6 +1406,19 @@ main {
     .cta-inline {
         flex-direction: column;
         align-items: stretch;
+    }
+
+    .chart-card {
+        gap: 1.2rem;
+    }
+
+    .chart-toggle,
+    .scenario-toggle {
+        flex: 1 1 100%;
+    }
+
+    .chart {
+        min-height: 250px;
     }
 }
 
@@ -1207,5 +1470,9 @@ main {
 
     .site-footer__top {
         gap: 1.6rem;
+    }
+
+    .chart {
+        min-height: 220px;
     }
 }
